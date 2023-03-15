@@ -13,7 +13,7 @@ function Content() {
     }
 
     
-    return <div>
+    return <Contact>
         <ContentTop>
             <h1>Get Reaquest Exemples</h1>
             <button onClick={getJoke}>Click for get random data</button>
@@ -21,7 +21,8 @@ function Content() {
             <span> {joke} </span>
             </span>
         </ContentTop>
-    </div>
+        <a href="https://official-joke-api.appspot.com/random_joke">API</a>
+    </Contact>
 }
 
 export default Content
@@ -31,7 +32,7 @@ const ContentTop = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 10%;
+    margin-top: 13%;
     
     button{
         cursor: pointer;
@@ -50,6 +51,7 @@ const ContentTop = styled.div`
         }
     }
     span{
+        transition: all 1s ease;
         font-size: 20px;
     }
 
@@ -61,4 +63,22 @@ const ContentTop = styled.div`
         font-family: 'Tilt Neon', cursive;
     }
 
+`
+
+const Contact = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    a{
+        margin-top: 20%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #000;
+        &:hover{
+            transition: all 0.5s ease;
+            color: #fff;
+            background-color: #000;
+        }
+    }
 `
