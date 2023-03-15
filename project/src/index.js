@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.querySelector('.wrapper'));
 root.render(
-  <BrowserRouter>
+  <div>
     <App />
-  </BrowserRouter>
+  </div>
 );
